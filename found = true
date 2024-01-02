@@ -1,0 +1,12 @@
+   guessed_letters.insert(guessed);
+        let mut found = false;
+        for (i, letter) in secret_word.chars().enumerate() {
+            if guessed == letter {
+                display[i] = &secret_word[i..i+1];
+                found = true;
+            }
+        }
+
+        if !found {
+            guesses_left -= 1;
+        }
